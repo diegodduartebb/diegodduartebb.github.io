@@ -1,0 +1,173 @@
+@keyframes fadeInEffect {
+  from {
+    opacity: 0; /* Estado inicial: completamente invisible */
+  }
+  to {
+    opacity: 1; /* Estado final: completamente visible */
+  }
+}
+
+/* Estilos para HTML: Asegúrate de que NO tenga el fondo verde */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #b5decc; /* O déjalo sin background para el color por defecto del navegador */
+}
+
+body {
+  transition: 1s;
+  background: white;
+  border: 1vh solid #b5decc; /* Borde blanco sólido de 2px añadido */
+  height: 98vh;
+  
+  /* --- Añadir para el Fade-in --- */
+  opacity: 0; /* Empieza invisible */
+  animation-name: fadeInEffect;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+main {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 15px;
+  grid-template-rows: min-content auto;
+}
+
+p {
+  font-family: "Basteleur-Moonlight", serif;
+}
+
+.icaro {
+  height: auto;
+  max-width: 100%;
+}
+
+.quemar {
+  height: auto;
+  max-width: 100%;
+}
+
+.dobleancho {
+  grid-column: span 2;
+}
+
+.doblealtura {
+  grid-row: span 2;
+}
+
+img {
+  transition: transform 0.25s;
+}
+
+.enlace-sin-manito {
+  cursor: default;
+}
+
+.enlace-sin-manito:hover {
+  transform: scale(1.06);
+}
+
+.project1 {
+    display: none;            /* no se renderiza */
+}
+
+.project2 {
+    display: none;            /* no se renderiza */
+}
+
+
+
+#icaroproyecto {
+  width: 70vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: fixed;
+  top: 110vh;
+  left: 15vw;
+  z-index: 99;
+  background: white;
+  align-items: center;
+  justify-items: center;
+}
+
+
+
+
+body[data-hash="icaro"] .enlace-sin-manito {
+  filter: blur(6px);
+  transition: 2s;
+  pointer-events: none; 
+}
+
+body[data-hash="icaro"] #icaroproyecto {
+  transform: translate(0vw, -100vh);
+  transition: 2s;
+}
+
+body[data-hash="icaro"] .project1 {
+  display: block; 
+}
+
+.videos{
+  width: 100%;
+  margin-left: 10px;
+}
+
+#icarooo{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: start;
+  justify-self: start;
+}
+
+
+
+
+#quemarproyecto {
+  width: 70vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: fixed;
+  top: 110vh;
+  left: 15vw;
+  z-index: 99;
+  background: white;
+  align-items: center;
+  justify-items: center;
+}
+
+body[data-hash="quemar"] .enlace-sin-manito {
+  filter: blur(6px);
+  transition: 2s;
+  pointer-events: none; 
+}
+
+body[data-hash="quemar"] #quemarproyecto {
+  transform: translate(0vw, -100vh);
+  transition: 2s;
+}
+
+body[data-hash="quemar"] .project2 {
+  display: block; 
+}
+
+.videoss{
+  height: 100%;
+  width: 100%;
+}
+
+#quemaaar{
+  align-self: start;
+  justify-self: start;
+  margin:10px;
+}
+
+

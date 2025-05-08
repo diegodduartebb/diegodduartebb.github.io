@@ -1,0 +1,99 @@
+@keyframes fadeInEffect {
+  from {
+    opacity: 0; /* Estado inicial: completamente invisible */
+  }
+  to {
+    opacity: 1; /* Estado final: completamente visible */
+  }
+}
+
+/* Estilos para HTML: Asegúrate de que NO tenga el fondo verde */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #b5decc; /* O déjalo sin background para el color por defecto del navegador */
+}
+
+body {
+  transition: 1s;
+  background: white;
+  border: 1vh solid #b5decc; /* Borde blanco sólido de 2px añadido */
+  
+  
+  
+  /* --- Añadir para el Fade-in --- */
+  opacity: 0; /* Empieza invisible */
+  animation-name: fadeInEffect;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+main {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 15px;
+  grid-template-rows: min-content auto;
+}
+
+.icaro {
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "Helvetica-bold", sans-serif;
+  font-weight: 700;
+  font-size: var(--titulo);
+}
+
+h2 {
+  font-family: "Helvetica-bold", sans-serif;
+  font-weight: 700;
+  font-size: var(--28pt);
+}
+
+h3 {
+  font-family: "Helvetica-bold", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Helvetica-medium", sans-serif;
+  font-weight: 500;
+}
+
+.bordeverde {
+  border-right: 1px solid #b5decc
+}
+
+.quintubleancho {
+  grid-column: span 5;
+}
+
+.cuadrupleancho {
+  grid-column: span 4;
+}
+
+.tripleancho {
+  grid-column: span 3;
+}
+
+.dobleancho {
+  grid-column: span 2;
+}
+
+.doblealtura {
+  grid-row: span 2;
+}
+
+.triplealtura {
+  grid-row: span 3;
+}
+
+.verde {
+  color: #b5decc;
+}

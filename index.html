@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Diego Duarte</title>
+
+    <meta name="description" content="Pagina personal de Juan Diego Duarte" />
+    <meta
+      name="keywords"
+      content="Juan Diego Duarte, portfolio, proyectos, investigación, desarrollador, artista"
+    />
+    <meta name="author" content="Juan Diego Duarte" />
+
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/logo.png?v=1745947833548"
+    />
+
+    <link rel="stylesheet" href="style-clear.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-tipografia.css" />
+
+    
+    <!-- Orden correcto de dependencias -->
+    
+    <script src="script-propio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://nasif-co.github.io/borrow.js/borrow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+    
+    
+  </head>
+
+  <body>
+    <div id="vanta"></div>
+
+    <script>
+      // Esperar a que el DOM esté listo
+      document.addEventListener("DOMContentLoaded", function () {
+        VANTA.TOPOLOGY({
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0xffffff,
+          backgroundColor: 0xb5decc, // Añadir color de fondo por si acaso
+        });
+      });
+    </script>
+
+    <div id="nombre_central" class="titulo">
+      <span class="fondoblanco">Juan Diego Duarte</span>
+    </div>
+
+    <div id="projects" class="subtitulo">
+      <span class="fondoblanco" style="cursor: pointer">Projects</span>
+    </div>
+
+    <div id="research" class="subtitulo">
+      <span class="fondoblanco" style="cursor: pointer">Research</span>
+    </div>
+
+    <div id="cv" class="subtitulo">
+      <span class="fondoblanco" style="cursor: pointer">CV</span>
+    </div>
+
+    <div id="fahrenheit" class="subtitulo">
+      <span class="fondoblanco" style="cursor: pointer">Fahrenheit</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+@keyframes fadeInEffect {
+  from {
+    opacity: 0; /* Estado inicial: completamente invisible */
+  }
+  to {
+    opacity: 1; /* Estado final: completamente visible */
+  }
+}
+
+/* Estilos para HTML: Asegúrate de que NO tenga el fondo verde */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #b5decc; /* O déjalo sin background para el color por defecto del navegador */
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#vanta{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Esto asegura que el fondo quede detrás de todo el contenido */
+}
+
+
+#nombre_central {
+  top: 40vh;
+  left: 0;
+  position: fixed;
+}
+
+#projects {
+  position: fixed;
+  top: 50.5vh;
+  left: 0;
+}
+
+#research {
+  position: fixed;
+  top: 50.5vh;
+  left: 8rem;
+}
+
+#cv {
+  position: fixed;
+  top: 50.5vh;
+  left: 15.3rem;
+}
+
+#fahrenheit {
+  position: fixed;
+  top: 50.35vh;
+  left: 18.5rem;
+}
+
+
+.subtitulo{
+  transition: 0.3s;
+}
+
+.subtitulo:hover {
+  transform: scale(1.2);
+}
+
+/* Clase para la transición de salida (fade-out) */
+.fade-out {
+  opacity: 0;
+}
+
+/* Define el estado normal con opacidad 1 y una transición */
+body {
+  /* --- Añadir para el Fade-in --- */
+  opacity: 0; /* Empieza invisible */
+  animation-name: fadeInEffect;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  
+  transition: opacity 0.2s ease-in-out;
+}
+
+
+
+

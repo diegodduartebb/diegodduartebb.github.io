@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Basteleur-Moonlight";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/Basteleur-Moonlight.woff?v=1743534930172")
+    format("woff");
+}
+
+@font-face {
+  font-family: "Basteleur-Bold";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/Basteleur-Bold.woff?v=1743534932690")
+    format("woff");
+}
+
+@font-face {
+  font-family: "DEWY-SVG_Martin Kipper";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/DEWY-SVG_Martin%20Kipper.otf?v=1743534957485")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Beast-Regular";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/Beast-Regular.woff2?v=1743535033381")
+    format("woff");
+}
+
+@font-face {
+  font-family: "Helvetica-medium";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/HelveticaNeueMedium.otf?v=1746631888565")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica-bold";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/HelveticaNeueBold.otf?v=1746631897397")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica-cool";
+  src: url("https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/helvetica-destru-pix.ttf?v=1746631878670")
+    format("truetype");
+}
+
+:root {
+  --13pt: calc(0.92rem);
+  --15pt: calc(1.038rem);
+  --17pt: calc(1.1625rem);
+  --19pt: calc(1.3525rem);
+  --21pt: calc(1.413rem);
+  --28pt: calc(1.9rem);
+  --titulo: calc(4.5rem);
+}
+
+.titulo {
+  font-family: Helvetica, sans-serif;
+  font-size: var(--titulo);
+  color: black;
+  font-weight: 500;
+  padding: 15px;
+}
+
+.subtitulo {
+  font-size: var(--17pt);
+  color: black;
+  font-weight: 500;
+  padding: 15px;
+}
+
+.fondoblanco {
+  background-color: white;
+  padding: 4px; /* Ajusta el valor según el espacio que necesites */
+}
+
+
+#projects {
+  font-family: "Beast-Regular", serif;
+}
+
+#research {
+  font-family: "Basteleur-Moonlight", serif;
+}
+
+.research {
+  font-family: "Basteleur-Moonlight", serif;
+}
+
+#cv {
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+#fahrenheit {
+  font-family: "DEWY-SVG_Martin Kipper", serif;
+  font-size: var(--19pt);
+}
+
+

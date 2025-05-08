@@ -1,0 +1,117 @@
+@keyframes fadeInEffect {
+  from {
+    opacity: 0; /* Estado inicial: completamente invisible */
+  }
+  to {
+    opacity: 1; /* Estado final: completamente visible */
+  }
+}
+
+/* Estilos para HTML: Asegúrate de que NO tenga el fondo verde */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #b5decc; /* O déjalo sin background para el color por defecto del navegador */
+}
+
+body {
+  transition: 1s;
+  background: white;
+  border: 1vh solid #b5decc; /* Borde blanco sólido de 2px añadido */
+  
+  /* --- Añadir para el Fade-in --- */
+  opacity: 0; /* Empieza invisible */
+  animation-name: fadeInEffect;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+main {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 15px;
+  grid-template-rows: min-content auto;
+}
+
+
+.dobleancho {
+  grid-column: span 3;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+h1 {
+  font-size: var(--titulo);
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-color: #f48067;
+  font-size: var(--17pt);
+}
+
+p {
+  font-size: var(--15pt);
+}
+
+a {
+  color: #f48067;
+  font-size: var(--13pt);
+}
+
+
+/* ==== GitHub Profile Widget ==== */
+#github-profile {
+  max-width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Basteleur-Moonlight", serif;
+}
+
+#github-profile img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+#github-profile h2 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.25rem;
+}
+
+#github-profile p {
+  color: black;
+  font-size: 0.8rem;
+  padding: 3px;
+}
+
+#github-profile a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #f48067;
+  color: #f48067;
+  padding-bottom: 7px;
+}
+
+
+#github-profile ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 4px;
+  text-align: center;
+}
+
+#github-profile li {
+  margin: 5px;
+}

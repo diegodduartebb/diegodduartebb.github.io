@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Research</title>
+
+    <meta name="description" content="Proyectos de Juan Diego Duarte" />
+    <meta
+      name="keywords"
+      content="Juan Diego Duarte, portfolio, proyectos, investigación, desarrollador, artista"
+    />
+    <meta name="author" content="Juan Diego Duarte" />
+
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/logo.png?v=1745947833548"
+    />
+
+    <link rel="stylesheet" href="style-clear.css" />
+    <link rel="stylesheet" href="research/style.css" />
+    <link rel="stylesheet" href="style-tipografia.css" />
+
+    <!-- Orden correcto de dependencias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://nasif-co.github.io/borrow.js/borrow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    
+    
+  </head>
+
+  <body>
+    <main>
+      <h1 class="dobleancho research">Not Published yet</h1>
+
+      <h2 class="research">Credit and Deforestation</h2>
+
+      <h2 class="research">
+        Loss of effectiveness of environmental protection areas
+      </h2>
+
+      <h2 class="research">
+        Zipaquira's institutional transformation of XX century
+      </h2>
+
+      <img
+        src="https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/Captura%20de%20pantalla%202025-04-29%20a%20la(s)%207.13.46%E2%80%AFp.m..png?v=1745972072028"
+        alt="Arbol el ASCII"
+      />
+
+      <img
+        src="https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/Captura%20de%20pantalla%202025-04-29%20a%20la(s)%207.39.38%E2%80%AFp.m..png?v=1745973585498"
+        alt="Rio en ASCII"
+      />
+
+      <img
+        src="https://cdn.glitch.global/7385bc18-9fd0-4841-973b-5829ec3c6985/Captura%20de%20pantalla%202025-04-29%20a%20la(s)%208.14.33%E2%80%AFp.m..png?v=1745975678885"
+        alt="Zipaquira en ASCII"
+      />
+
+      <p>
+        Together with Professor
+        <a
+          href="https://gobierno.uniandes.edu.co/mauricio-velasquez-ospina/"
+          class="enlaces research"
+          >Mauricio Velasquez</a
+        >
+        we investigated the effect of central government subsidized credit on
+        deforestation in the Colombian context, where the question about
+        deforestation in developing countries is about answering how the
+        microeconomic incentives affects peasants. Deforestation occurs because
+        of the context where local economic models are developed, because it is
+        a systematic behavior
+      </p>
+
+      <p>
+        I am studying the evolution of the effects of environmental conservation
+        zones over deforestation in Colombia. Several insights show that
+        conservation zones function more as a para-state than as an incentive
+        constraint. Preliminary results show that natural parks have been losing
+        their effect over time.
+      </p>
+
+      <p>
+        Within my research group (Fahrenheit) we are studying the civic,
+        cultural and institutional development of the city of Zipaquira,
+        Colombia, from documentary and photographic records. In this way, we are
+        typifying in a parallel way the development of the material and cultural
+        conditions of the municipality. With this we seek to recover the
+        historical memory of the municipality, while shedding light on the
+        connection between institutions and economic development.
+      </p>
+
+      <h1 class="dobleancho research">Github</h1>
+
+      <div id="github-profile">
+        <p>Cargando perfil de GitHub…</p>
+      </div>
+
+      <script>
+        const username = "diegodduartebb"; // ← tu usuario GitHub
+        const container = document.getElementById("github-profile");
+
+        async function fetchGitHubProfile(user) {
+          try {
+            // 1) Datos del usuario
+            const resUser = await fetch(`https://api.github.com/users/${user}`);
+            if (!resUser.ok) throw new Error("Usuario no encontrado");
+            const profile = await resUser.json();
+
+            // 2) Últimos 5 repositorios
+            const resRepos = await fetch(
+              profile.repos_url + "?sort=updated&per_page=5"
+            );
+            const repos = resRepos.ok ? await resRepos.json() : [];
+
+            // 3) Armar el HTML
+            container.innerHTML = `
+        <img src="${profile.avatar_url}" alt="Avatar de ${profile.login}">
+        <h2>${profile.name || profile.login}</h2>
+        <p>${profile.bio || ""}</p>
+        <p>⚲ ${profile.location || "Sin ubicación"}</p>
+        <p>✉︎ Joined ${new Date(profile.created_at).toLocaleDateString()}</p>
+        <a href="${profile.html_url}" target="_blank">Profile</a>
+        <h3>Last repositories</h3>
+        <ul>
+          ${repos
+            .map(
+              (r) =>
+                `<li>
+               <a href="${r.html_url}" target="_blank">${r.name}</a>
+               ${r.description ? `<br><small>${r.description}</small>` : ""}
+             </li>`
+            )
+            .join("")}
+        </ul>
+      `;
+          } catch (err) {
+            container.innerHTML = `<p>Error: ${err.message}</p>`;
+          }
+        }
+
+        window.addEventListener("DOMContentLoaded", () =>
+          fetchGitHubProfile(username)
+        );
+      </script>
+    </main>
+  </body>
+</html>

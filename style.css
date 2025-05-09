@@ -31,32 +31,32 @@ main {
 
 
 #nombre_central {
-  top: 40vh;
+  top: 22.5rem;
   left: 0;
   position: fixed;
 }
 
 #projects {
   position: fixed;
-  top: 50.5vh;
+  top: 28.3rem;
   left: 0;
 }
 
 #research {
   position: fixed;
-  top: 50.5vh;
+  top: 28.3rem;
   left: 8rem;
 }
 
 #cv {
   position: fixed;
-  top: 50.5vh;
+  top: 28.3rem;
   left: 15.3rem;
 }
 
 #fahrenheit {
   position: fixed;
-  top: 50.35vh;
+  top: 28.3rem;
   left: 18.5rem;
 }
 

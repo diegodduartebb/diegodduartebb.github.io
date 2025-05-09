@@ -12,13 +12,13 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #b5decc; /* O déjalo sin background para el color por defecto del navegador */
+  background: white; /* O déjalo sin background para el color por defecto del navegador */
 }
 
 body {
   transition: 1s;
   background: white;
-  border: 1vh solid #b5decc; /* Borde blanco sólido de 2px añadido */
+  border: 1vh solid white; /* Borde blanco sólido de 2px añadido */
   
   
   
